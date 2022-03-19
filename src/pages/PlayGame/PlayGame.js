@@ -9,11 +9,6 @@ const PlayGame = () => {
   const socket = useSocket();
 
 
-    useEffect(() => {
-      socket.on("chat-message", (username, msg) => {
-        io.emit("the-message", username + ": " + msg);
-      });
-    }, [socket]);
 
 
   useEffect(() => {
@@ -25,6 +20,10 @@ const PlayGame = () => {
   return (
     <div>
       <TheQuestions />
+      <form id="form" action="">
+        <input id="input" autocomplete="off" />
+        <button>Send</button>
+      </form>
     </div>
   );
 };
