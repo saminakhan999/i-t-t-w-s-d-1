@@ -28,9 +28,13 @@ const PlayGame = () => {
 
   return (
     <div>
+      {showResults ? <QuizChat /> : null}
       <TheQuestions />
-      <div onClick={onClick} className="bg-slate-50 text-tblack py-3 text-center rounded-full font-bold px-6 mx-auto fixed bottom-16 left-0 right-0 w-fit">
-        {showResults ? <QuizChat/> : null}Chat
+      <div
+        onClick={onClick}
+        className="bg-slate-50 text-tblack py-3 text-center rounded-full font-bold px-6 mx-auto fixed bottom-16 left-0 right-0 w-fit"
+      >
+        Chat
       </div>
     </div>
   );
