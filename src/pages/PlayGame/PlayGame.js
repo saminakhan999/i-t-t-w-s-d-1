@@ -9,7 +9,13 @@ const PlayGame = () => {
   const dispatch = useDispatch();
   const socket = useSocket();
   const [showResults, setShowResults] = useState(false);
-  const onClick = () => setShowResults(true);
+  const onClick = () => {
+    if (showResults===false) {
+      setShowResults(true);
+    } else {
+      setShowResults(false);
+    }
+  };
 
 
 
